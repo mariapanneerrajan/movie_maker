@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**)",
+      "Glob",
+      "Grep",
+      "Write(sandbox_*/**)",
+      "Edit(sandbox_*/**)",
+      "Write(.claude/craft/**)",
+      "Edit(.claude/craft/**)",
+      "Write(protagonist/**)",
+      "Edit(protagonist/**)",
+      "WebSearch",
+      "WebFetch"
+    ],
+    "ask": [
+      "Bash(rm:*)",
+      "Bash(rmdir:*)",
+      "Bash(mv:*)"
+    ]
+  }
+}
