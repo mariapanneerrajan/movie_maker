@@ -1,6 +1,6 @@
 # The naming contract
 
-Read by: asset-designer, storyboard-artist, seedance-prompt-engineer, continuity-checker.
+Read by: `asset-prompt-engineer`, `script-prompt-engineer`.
 
 ## Why this is a contract and not a convention
 
@@ -33,19 +33,15 @@ the same pass.
 | Character | `CHR_<NAME>` | `CHR_RAJAN`, `CHR_ELDER_MIRA`, `CHR_TIN_SPARROW` |
 | Environment | `ENV_<PLACE>_<QUALIFIER>` | `ENV_LIGHTHOUSE_INT`, `ENV_SALT_FLATS`, `ENV_WORKSHOP_EXT` |
 | Prop | `PRP_<THING>` | `PRP_BRASS_LANTERN`, `PRP_SEED_VIAL` |
-| Storyboard panel | `SB_N<node>_<nn>` | `SB_N1_01`, `SB_N3_02`, `SB_N6_03` |
 
 Environment qualifiers: use `_INT` / `_EXT` where a space exists in both, or a distinguishing
 word where the same place appears in two states the geometry actually differs in
 (`ENV_TOWER_INTACT` / `ENV_TOWER_RUINED`). Do **not** create separate environments for the same
 space at different times of day — time of day is Seedance's job, not the asset's.
 
-Storyboard panels are numbered within their node, starting at `01`, in time order. `SB_N3_02` is
-the second panel of node 3. Panel numbering never crosses nodes.
-
 ## Every prompt file declares its own name
 
-The first field of every asset and storyboard prompt file, before anything else:
+The first field of every asset prompt file, before anything else:
 
 ```markdown
 **Output filename:** CHR_RAJAN.png
@@ -59,5 +55,14 @@ basename exactly.
 Rajan plays the protagonist in every film in this workshop. The character asset is **always**
 named `CHR_RAJAN`, regardless of what the character is called inside the story. If the script
 names him Elias, the script says `ELIAS` and the asset is still `CHR_RAJAN` — with the in-story
-name recorded in the asset file and in `ASSET_INDEX.md`, so the node prompts can use the story
-name in dialogue while referencing the stable asset name.
+name recorded in the asset file and in `ASSET_INDEX.md`.
+
+## The chain that carries names downstream
+
+```
+asset-prompt-engineer     writes 02_assets/**  →  ASSET_INDEX.md
+script-prompt-engineer    reads ASSET_INDEX.md →  the node's "References to connect" list
+```
+
+Every name in the node's `References to connect` must exist in `ASSET_INDEX.md`, spelled
+exactly. That list is what tells Rajan which reference images to connect to the node.

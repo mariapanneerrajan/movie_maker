@@ -3,7 +3,7 @@
 Rajan plays the protagonist in every film made in this workshop. This folder holds his raw
 character sheet and the likeness locks that carry from film to film.
 
-**These notes are read by `asset-designer` on every film** when it writes `CHR_RAJAN.md`. What is
+**These notes are read by `asset-prompt-engineer` on every film** when it writes `CHR_RAJAN.md`. What is
 written here is what stays constant about him across every story; everything else — wardrobe, hair
 treatment, era, world detail — is restyled per film.
 
@@ -11,10 +11,20 @@ treatment, era, world detail — is restyled per film.
 
 ## The raw sheet
 
-**File:** `protagonist/RAJAN_RAW.png` — 2048×1152, seven views on white.
+**File:** `protagonist/RAJAN_RAW.png` — 2048×1152, three panels on grey.
 
-Views present: **front**, **left 3/4**, **right 3/4**, **left profile**, **right profile**,
-**back of head**, and a full-body **standing** figure with a height scale.
+Views present: a full-body **standing front** figure (cropped above the neck — no head in this
+panel), a full-body **standing back** figure (head included), and a **close-up front headshot**.
+No height scale is present. There is no left/right 3/4, no profile, and the standing front panel
+carries no face — the headshot panel is the only frontal face reference, and the standing back
+panel is the only source for hair at the crown and back of the head.
+
+*(Sheet content replaced 2026-08-14 — the file name stays `RAJAN_RAW.png`, unchanged, since that is
+the name every reference in the workflow points to. The new sheet has three panels, down from the
+old seven-view layout, and drops the height scale. Because no profile or 3/4 angle exists on this
+sheet, any film needing a side view of Rajan's face has to extrapolate from the front headshot and
+back-of-head panel — flag that explicitly in the asset prompt rather than assuming a profile
+reference exists.)*
 
 Every film's `CHR_RAJAN` prompt is written as an **image-to-image restyle** declaring this file as
 its input, so the model preserves the real likeness rather than inventing a face.
@@ -24,7 +34,7 @@ its input, so the model preserves the real likeness rather than inventing a face
 ## Likeness locks
 
 Stated as declarative fact in every film's character prompt. This is what holds the face together
-across six independently generated Seedance nodes.
+across every reference image and the film's single Seedance generation.
 
 - **Apparent age:** late 30s
 - **Build and height:** 5 ft 10 in (178 cm). Lean and slender — narrow shoulders, slim frame, no
@@ -43,14 +53,15 @@ across six independently generated Seedance nodes.
   curls persisting at the crown and back. Hairline slightly receded at the temples
 - **Facial hair:** short, even stubble across the moustache area, jaw, and chin — days-old growth,
   never a full beard. Lightly flecked with grey
-- **Glasses or habitual accessories:** **always wears glasses.** Rectangular lenses, rimless or
-  near-rimless at the bottom, with very thin dark metal temple arms. Low-profile and understated.
-  A faint blue-violet anti-reflective sheen catches in the lenses. No other habitual accessories
+- **Glasses or habitual accessories:** **always wears glasses.** Rectangular lenses, **fully
+  rimless** — no frame visible at top or bottom, just thin dark metal temple arms meeting the lens
+  edge directly. Low-profile and understated. A faint blue-violet anti-reflective sheen catches in
+  the lenses. No other habitual accessories
 - **Distinguishing marks:** none prominent. The combination that reads as *him* is the salt-and-
   pepper curls with height, the thin rimless rectangular glasses, and the lean long-jawed face
 - **Resting expression:** calm, level, unsmiling but not stern. Direct gaze. Composed and watchful
 - **Posture and bearing:** upright and relaxed, shoulders level and easy, weight evenly set. In the
-  standing view, hands in trouser pockets. Still rather than restless
+  standing views, arms relaxed at his sides. Still rather than restless
 
 ## Wardrobe in the reference sheet — *not* a lock
 
@@ -61,17 +72,11 @@ unless a film calls for it.
 
 ## Voice
 
-Seedance 2.5 generates audio, and the continuity block in every node states voice so he sounds the
-same in node 6 as in node 1. **Filled by Rajan 2026-08-12. This is a lock — it binds every film.**
+This workshop's films carry no dialogue, voiceover, or on-screen text (wordless film, set
+2026-08-14). Rajan's voice is never generated or specified in a Seedance prompt.
 
-- **Age of voice:** 38-year-old male. Reads as a man in his late thirties — settled, not young,
-  not old.
-- **Timbre:** **Deep.** Low-pitched, full-bodied, resonant in the chest. Not gravelly, not
-  breathy, not thin.
-- **Accent:** **Fluent English.** Clear and articulate, no hesitation, no groping for words.
-- **Pace and rhythm:** **Mature pacing.** Measured and unhurried. He does not rush, does not
-  trail off, and does not fill silence. Even under fear, the tempo holds — the fear shows in the
-  body and the face, not in the speech.
+*(Removed 2026-08-14: previously locked age, timbre, accent, and pace for dialogue continuity
+across nodes — filled by Rajan 2026-08-12. Moot once the format went dialogue-free.)*
 
 ## Things to avoid
 
@@ -96,7 +101,7 @@ The asset is **always** named `CHR_RAJAN`.
 
 **The in-story name is also `Rajan` by default — in every film, unless Rajan asks for a different
 one.** Do not invent a character name for him. If a story genuinely needs a different in-story name,
-ask first; otherwise he is called Rajan on screen and in dialogue.
+ask first; otherwise he is called Rajan on screen.
 
 *(Set 2026-08-12, on film one. The first draft of THE FIFTH STONE named him "Arul" and Rajan
 corrected it — the head writer had assumed the in-story name was free to invent, because this file

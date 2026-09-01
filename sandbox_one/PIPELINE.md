@@ -1,110 +1,52 @@
 # PIPELINE
 
 **Sandbox:** sandbox_one
-**Started:** 2026-08-12
-**Working title:** The Fifth Stone
-**Current gate:** 2 — AWAITING RAJAN'S REVIEW
+**Started:** 2026-08-17
+**Working title:** THE SMALLEST STONE
+**Current gate:** 3
+
+## Live agents
+
+| Gate | Agent | Id |
+| --- | --- | --- |
+| 0 | idea-scout | a883b44e47e6114ad |
+| 1 | script-writer | ad4f3e492cf454568 |
+| 2 | asset-prompt-engineer | a20f6d45febab8a4e |
+| 3 | script-prompt-engineer | ab6d83adf88fe1a5d |
 
 ## Gate log
 
-### Gate 0 — Seed captured — APPROVED 2026-08-12
-  Seed: David vs Goliath, sci-fi, Chennai. Garbage giants rise from the Cooum and the kuppa medus.
-  Rajan's simple contrary act brings one down; the city segregates its waste and cleans the river.
-  Hard veto recorded: **no religious buildings of any kind** in any prompt at any gate.
-  Two charter reconciliations recorded in `00_seed.md` — no one is eaten; "little boy" reads as
-  slight/unarmed/dismissed, not literal age.
-
-### Gate 1 — Logline selected — APPROVED 2026-08-12
-  Rajan: "I like idea number one."
-  Chose: **THE FIFTH STONE** — "When a garbage giant rises from the Cooum and the city's armoured
-  response force empties every weapon into it without effect, a slender conservancy worker refuses
-  the exo-suit they offer him, wades into the black water for five sorted things, and aims for the
-  one seam that armour was never covering."
-  Anchor: 1 Samuel 17:38–40, read with 17:45.
+### Gate 3 — Node prompt — IN PROGRESS
   Corrections:
-  - *(none)*
+  - (on shot 4's "Flat on his back... whips the scarf sling") "If he's on his back, how can he whip the scarf sling? Because it'll be difficult to whip the sling while you're flat on your back, won't another pose suit this shot better?" → offered three poses; Rajan: "yeah, let's refine it to be 1. rise into the throw." (roll and surge to one knee as the sling comes around, release at the top; whirl and rise are one motion)
+  - "can you explain the purpose of this selectline? It might be ambiguous to the model, as it might assume that the most fallen giant might be like an actual giant creature, but from my understanding, it's actually just a giant tree, right?" (re: "Past his cheek a mossed fallen giant" in shot 3) → manager fixed inline: "a colossal mossed fallen tree trunk"
 
-### Gate 2 — Script — IN PROGRESS
-  Draft v1 written by `head-writer` (agent a7bc7869e5e8104cb, kept alive across rounds).
-  Round 1: all four reviewers returned REVISE. Full reviews saved to `_review_r1_*.md`.
-
-  **Vetoes raised in round 1:**
-  - `scripture-guardian` #1 BLOCKING — works-righteousness. The city cancelling its own
-    consequence by its own labour, asserted in the final 30 seconds. Ephesians 2:8-9.
-  - `fact-checker` #1 BLOCKING — the Cooum is black from untreated sewage (127 outfalls,
-    ~900 unplugged), not litter. Citizens picking up litter does not clean that river.
-  - `fact-checker` #2 BLOCKING — Ranganathan Street's carriageway is ~7 m. Twenty 3 m
-    exo-frames abreast need ~60 m, and a 60 m giant cannot enter it at all.
-
-  **Arbitration made by the orchestrator (recorded for the retrospective):**
-  - Head writer's Note 3 (refusing to give Arul a line explaining why the method will work)
-    UPHELD — three reviewers independently defended it.
-  - `entertainment-doctor` #5 and `scripture-guardian` #1(b) wanted opposite things about the
-    second giant. Synthesis proposed: it stands at 2:30 and the city turns toward it, but what
-    unmakes it is visibly the sorting Arul released, arriving — the city gathers what has
-    already been sorted rather than defeating it. Head writer to resolve; scripture-guardian
-    holds its veto open on this point into round 2.
-  - `fact-checker` #9(a) chosen over #9(b): the pouch is empty at 2:06 (the Cooum took it), so
-    the fifth stone is a gift rather than an inventory item. #9(b) would have conflicted with
-    `scripture-guardian` #2.
-
-  **Round 2** (on `_draft_v2.md`). Full reviews saved to `_review_r2_*.md`.
-  - `scripture-guardian` — **PASS. VETO RELEASED.** Found the works-righteousness fix clears
-    "genuinely, not by fig leaf," and called the light running north "the strongest new thing in
-    the draft." Two advisory notes, both routed into the standing production note.
-  - `fact-checker` — REVISE, two NEW BLOCKING, both single-line repairs, one of them holding its
-    own round-1 recommendation to the standard it applied to Chennai Central:
-    (1) the Fort St George flagstaff is not teak (steel replica since 1994) and is not the
-    tallest in the country (Attari–Wagah, 418 ft);
-    (2) twenty 3 m exo-frames cannot stand abreast on Usman Road either — needs ~17 lanes.
-    Both round-1 blocks CLEARED.
-  - `entertainment-doctor` — REVISE, all runtime allocation. **Withdrew its objection to the
-    second-giant synthesis** — "the head writer won this one." Read the draft as "more alive,
-    clearly. The corrections did not sand it."
-
-  **Convergence worth recording:** `fact-checker` #4 and `entertainment-doctor` #4 independently
-  found the same defect — the clean light is stated as faster than people and dramatised as
-  slower than people — and proposed the identical fix (light travels at walking pace). Taken.
-
-  **Orchestrator error, logged for the retrospective:** the round-1 review files were written to
-  disk moments AFTER the head writer was messaged, so it could not read them and integrated from
-  the arbitration digest instead. No findings were lost — the digest carried all of them — but
-  the round-2 message repeated the claim that files were verified present before they existed.
-  Lesson: write reviewer output to disk BEFORE sending the integration message that cites it.
-
-  **Round 3 / final integration.** Head writer produced `_draft_v3.md`. All vetoes cleared.
-  Head writer also read the round-1 files (which had appeared late) and folded in twelve findings
-  the orchestrator never relayed — most seriously `cinematographer` #3, the boy in the netting,
-  written as "tangled to the waist... hands scrabbling at the mesh," which is horror grammar and
-  had shipped unchanged through two drafts.
-
-  **Visual pass.** `cinematographer` mode 2 delivered the VISUAL BIBLE and the shooting script —
-  119 shots across 180 seconds, colour script, five-colour spine, lens language, four locked rhyme
-  frames, the insert system, scale block, prompt hygiene. It flagged six things that cannot be
-  generated as written and solved all six. It also found a defect nobody had seen: node 1's small
-  resolve has the same failure mode as node 6's big one, and if the small one fails the big one
-  has nothing to rhyme with.
-
-  **Written:** `01_script.md` (2,530 lines, 119 shot specs, 0:00.0–3:00.0 continuous),
-  `01_script_notes.md`.
-
+### Gate 2 — Assets — APPROVED 2026-08-17
+  17 assets. Rajan: "alright, let's go to the next gate"
   Corrections:
-  - **2026-08-12, verbatim:** "I want Rajan to have a deep voice of a 38-year-old male. He has a
-    mature pacing and has a fluent English accent. I want the protagonist to be called Rajan in
-    this script. And update the memory to always use the name Rajan unless specified otherwise."
+  - "would we need a version of the Rajan character a bit more dirty and grungy after falling down?" → manager recommended adding CHR_RAJAN_WORN; Rajan: "yes"
+  - "Shouldn't the PRP_OCHRE_SCARF.md and PRP_SCARF_SLING.md be a bit wet and dirty, as these props are going to be used in the second half of the movie, where, after the hero Rajan falls down, it is muddied and dirty and wet. This is when he takes a scarf and uses it as a sling ?" → manager recommended: base scarf stays dry (covers clean shots 1-2, material reference), PRP_SCARF_SLING becomes wet/dirty matching CHR_RAJAN_WORN; Rajan: "yes"
+  - (after generating PRP_SCARF_SLING) "It still looks like the scarf is dry, but at this point, won't the hero character become completely drenched, and hence the scarf also would be wet, right?"
+  - (after regenerating CHR_STONE_BEAST) "The first panel is okay. It shows a front view of the of the stone beast with its head hidden, but the second panel, which shows the back side of the stone beast, is supposed to also include the head. The head should be visible there, the back side of the head. I think it is missing. Can you refine the prompt accordingly?"
+  - (after generating CHR_STONE_BEAST image) "I want the beast to look more menacing. Its eyes and its mouth should be quite scary and dangerous. The current version of the creature doesn't even have a mouth. I needed to have sharp teeth, and it needs to roar and look scary and formidable."
 
-    Applied without spawning an agent — a name and a voice block, both unambiguous:
-    - `protagonist/RAJAN_NOTES.md` Voice block filled and marked as a lock binding every film.
-    - `protagonist/RAJAN_NOTES.md` "In-story naming" rewritten: **the in-story name is `Rajan` by
-      default in every film unless Rajan asks otherwise.** Do not invent a character name for him.
-    - ARUL → RAJAN throughout `01_script.md`, `01_script_notes.md`, `_draft_v3.md` and the
-      `_visual_part*.md` fragments. Left unchanged in `_draft_v1.md`, `_draft_v2.md` and the
-      `_review_*.md` files, which are the historical record of what was actually said at the time.
-    - Cast block in `01_script.md` now carries the voice spec, flagged for the continuity blocks of
-      nodes 3, 4 and 5.
-    - Age tightened from "late 30s" to 38 in the cast block. The likeness lock in `RAJAN_NOTES.md`
-      still reads "late 30s", which 38 satisfies — not changed.
+### Gate 1 — Script — APPROVED 2026-08-17
+  Working title: THE SMALLEST STONE. Rajan asked why the fallen forest giant is in shot 3;
+  explained it is a fallen tree carrying the midpoint turn and the anchor; he said (verbatim):
+  "okay, let's keep it. Let us move on to the next stage."
+  Corrections:
+  - "yes, remove the glasses. As for a cave man, it doesn't make sense to wear glasses. Yeah, in the low point, make it into an event. I want the giant's fist creating the floor beside him. And another refinement I want to make to the script is I don't want this fight happening in a rib cage arena I want. The fight happening in a luscious jungle should be a lot of greenery, and it should look very colorful and luscious."
 
-    **Root cause worth keeping:** `RAJAN_NOTES.md` said only that the *asset* name stays stable and
-    that the in-story name is recorded per film. The head writer reasonably read that as licence to
-    invent one, and chose "Arul". The file now says the opposite explicitly.
+### Gate 0 — Logline selected — APPROVED 2026-08-17
+  Chose: Set 3, idea 5 (ribcage arena), modified. Verbatim: "I like the rib cage arena.
+  Make sure it is happening in daylight, where everything is well lit and clearly
+  visible. I want the setting to be like a jungle. I don't want any other crowd or
+  characters. This should be like a luscious jungle inside which we see this rib cage
+  arena where this stone beast is fighting with Rajan, also, let's have Rajan dressed up
+  as a cave man."
+
+### Gate 0 — Ideas — earlier notes
+  Corrections:
+  - "give me five more ideas. I wanted it to be a very simple idea. It should be epic and fantastic to watch, but at the same time, it should be very simple to understand. I want a very simple story that old people and even really young people will be able to understand and enjoy" (Set 1 rejected)
+  - "give me five more ideas. Keep it simple, and I want a lot of action sequences in this movie. I wanted it to be in an arena. Maybe what if we just keep it on another planet where the hero is fighting against this giant monster creature maybe in the beginning, it looks a bit uninformative, and let's not just use a pebble that gets thrown. Instead, what if we have an actual fight sequence where the man is fighting against this massive giant? Maybe in the beginning, the man has weapons, and he fights, but then the monster just thrashes, breaks his weapons, throws it down, thrashes him, and throws him off. He's on the ground, and then he just finds a pebble lying there in the arena. He takes his scarf, puts the pebbles inside, and slings it at the giant, and it just falls down. Give me some ideas on these lines. Keep it very simple because the movie is just 30 seconds." (Set 2 rejected)
+  Seed (verbatim): "I want to create a movie to share how even an underdog can succeed. I want to show the story of David versus Goliath in the movie itself. I want to capture the key scene where David believes in God and goes and uses the pebble to strike the giant and make it fall. I want this story to be told in a sci-fi setting. I want a lot of very interesting shots. It should be highly action-oriented, with a lot of visual epic camera shots. I want to have slow-motion shots and 360 shots that emphasize the impact of the storytelling. I wanna convey the importance of faith and how, even as an underdog, even when things don't look like it's quite going your way, by having faith, you can overcome. You can do the impossible. I want the audience to feel empowered, inspired, and motivated to believe in themselves that anything is possible if they believe."
